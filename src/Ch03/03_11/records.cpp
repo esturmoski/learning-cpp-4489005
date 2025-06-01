@@ -1,1 +1,59 @@
 // Write your implementation code here
+
+#include "records.h"
+
+Student::Student(int id_i, std::string name_i){
+    id = id_i;
+    name = name_i;
+}
+
+std::string Student::get_name() const{
+    return name;
+}
+
+int Student::get_id(){
+    return id;
+}
+
+
+Course::Course(int id_i, std::string name_i, unsigned char credits_i){
+    
+    id = id_i;
+    name = name_i;
+    credits = credits_i;
+
+}
+
+int Course::get_id(){
+    return id;
+}
+
+std::string Course::get_name(){
+    return name;
+}
+
+unsigned char Course::get_credits(){
+    return credits;
+}
+
+
+
+Grade::Grade(int student_id_i, int course_id_i, char grade_i){
+
+    student_id = student_id_i;
+    course_id = course_id_i;
+    grade = grade_i;
+
+}
+
+int Grade::get_student_id(){
+    return student_id;
+}
+
+int Grade::get_course_id(){
+    return course_id;
+}
+
+unsigned char Grade::get_grade(){
+    return grade;
+}
